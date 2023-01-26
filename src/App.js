@@ -9,7 +9,6 @@ import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
-import {updateNewMessage, updateNewPostText} from "./redux/state";
 
 function App(props) {
   return (
