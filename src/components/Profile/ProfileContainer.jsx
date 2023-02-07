@@ -1,7 +1,6 @@
 import React from "react";
 import Profile from "./Profile";
 import axios from "axios";
-import {mapDispatchToPropsFactory} from "react-redux/es/connect/mapDispatchToProps";
 import {connect} from "react-redux";
 import {setUserProfile} from "../../redux/profile-reducer";
 
