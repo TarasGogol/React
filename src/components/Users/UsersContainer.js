@@ -50,32 +50,10 @@ let mapStateToProps = (state) => {
     }
 }
 
-// let mapDispatchToProps = (dispatch) => {
-//     return {
-//         follow: (userId) => {
-//             dispatch(followAC(userId))
-//         },
-//         unfollow: (userId) => {
-//             dispatch(unfollowAC(userId))
-//         },
-//         setUsers: (users) => {
-//             dispatch(setUserAC(users))
-//         },
-//         setCurrentPage: (pageNumber) => {
-//             dispatch(setCurrentPageAC(pageNumber))
-//         },
-//         setTotalUsersCount: (totalCount) => {
-//             dispatch(setUsersTotalCountAC(totalCount))
-//         },
-//         toggleIsFetching: (isFetching) =>{
-//             dispatch(toggleIsFetchingAC(isFetching));
-//         }
-//     }
-// }
 
 export default compose(
-    withAuthRedirect,
     connect(mapStateToProps,
         {follow, unfollow, setCurrentPage,
-            toggleFollowingProgress,getUsers})
+            toggleFollowingProgress,getUsers}),
+    withAuthRedirect,
 )(UsersContainer)
